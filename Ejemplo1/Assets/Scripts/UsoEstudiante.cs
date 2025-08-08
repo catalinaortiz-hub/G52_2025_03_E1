@@ -1,7 +1,6 @@
 using UnityEngine;
 using System;
 using packagePersona;
-using NUnit.Framework;
 using System.Collections.Generic;
 
 public class UsoEstudiante : MonoBehaviour
@@ -14,15 +13,15 @@ public class UsoEstudiante : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Estudiante e1 = new Estudiante("2025_03", "Ing multimedia", "David Castro", "dacastro@uao.co", "carrera 34");
-        Estudiante e2 = new Estudiante("2025_03", "Ing ambiental", "Maria Perez", "dacastro@uao.co", "carrera 34");
+        Estudiante e1 = new Estudiante("2025_03", "Ing Multimedia", "David Castro", "dacastro@uao.co", "carrera 34");
+        Estudiante e2 = new Estudiante("2025_03", "Ing Ambiental", "Maria Perez", "mperez@uao.co", "calle 14");
 
         listaE.Add(e1);
         listaE.Add(e2);
 
-        for (int i = 0;)
+        for (int i = 0; i < listaE.Count; i++)
         {
-            Debug.Log("name ");
+            Debug.Log("name " + listaE[i].NameP + " Carrera "+ listaE[i].NameCarreraE);
         }
 
     }
